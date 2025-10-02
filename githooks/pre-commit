@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+podman build --tag helloapp . >/dev/null
+exec podman run -it --rm helloapp python -m unittest helloapp.test

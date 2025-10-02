@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+HASH="$(git rev-parse --short HEAD)"
+exec ansible-playbook deploy-playbook.yaml --extra-vars image_name="helloapp:$HASH"
